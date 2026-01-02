@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名师教育 - 优质师资团队</title>
+    <style>
+        /* 保留原CSS样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #3498db;
+        }
+
+        /* 英雄区域 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        /* 师资介绍区域 */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .teacher-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .teacher-img {
+            width: 180px;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .teacher-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .teacher-info {
+            padding: 20px;
+        }
+
+        .teacher-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .teacher-subject {
+            color: #3498db;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .teacher-qualifications {
+            margin-bottom: 15px;
+        }
+
+        .teacher-qualifications li {
+            margin-bottom: 5px;
+        }
+
+        .teacher-bio {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* 特色服务 */
+        .features {
+            background-color: #f8f9fa;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        /* 联系我们 */
+        .contact {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2, .contact p {
+            margin-bottom: 1rem;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+            }
+            
+            nav ul li {
+                margin: 0 1rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">名师教育</div>
+            <nav>
+                <ul>
+                    <li><a href="/cytWeb/index.html">首页</a></li>
+                    <li><a href="/cytWeb/teachers.html">师资团队</a></li>
+                    <li><a href="/cytWeb/features.html">教学特色</a></li>
+                    <li><a href="/cytWeb/contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>专业师资团队，成就学生梦想</h1>
+            <p>我们拥有一支经验丰富、专业过硬的教师团队，致力于为每一位学生提供最优质的教育服务</p>
+            <a href="/cytWeb/teachers.html" class="btn">了解我们的师资</a>
+        </div>
+    </section>
+
+    <!-- 师资简介 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">优秀师资团队</h2>
+            <div class="teachers-grid">
+                <!-- 教师卡片 1 -->
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="/cytWeb/cyt_picture/mhr.jpg" alt="王一然">
+                    </div>
+                    <div class="teacher-info">
+                        <h3 class="teacher-name">王一然</h3>
+                        <span class="teacher-subject">小学全科，初中及高一数学，物理，化学</span>
+                        <ul class="teacher-qualifications">
+                            <li> 太原理工大学城乡规划专业在读（大二）</li>
+                            <li> 高考成绩优异</li>
+                            <li> 性格开朗耐心，善于沟通</li>
+                        </ul>
+                        <p class="teacher-bio">王老师性格开朗，沟通能力强，能够与学生建立良好互动，激发学习积极性。教学中注重方法引导与思维培养，帮助学生掌握学习技巧，在轻松的氛围中逐步提升成绩。</p>
+                        <a href="/cytWeb/teachers.html" class="btn">了解更多</a>
+                    </div>
+                </div>
+
+                <!-- 教师卡片 2 -->
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="/cytWeb/cyt_picture/ljc.jpg" alt="李老师">
+                    </div>
+                    <div class="teacher-info">
+                        <h3 class="teacher-name">李老师</h3>
+                        <span class="teacher-subject">英语学科专家</span>
+                        <ul class="teacher-qualifications">
+                            <li> 北外英语语言文学硕士</li>
+                            <li> 8年英语教学经验</li>
+                            <li> 雅思8分，专业八级</li>
+                        </ul>
+                        <p class="teacher-bio">李老师教学风格生动有趣，注重培养学生的英语实际应用能力，多名学生在各类英语竞赛中获奖。</p>
+                        <a href="/cytWeb/teachers.html" class="btn">了解更多</a>
+                    </div>
+                </div>
+
+                <!-- 教师卡片 3 -->
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="/cytWeb/cyt_picture/cyt.jpg" alt="陈老师">
+                    </div>
+                    <div class="teacher-info">
+                        <h3 class="teacher-name">陈老师</h3>
+                        <span class="teacher-subject">物理学科带头人</span>
+                        <ul class="teacher-qualifications">
+                            <li> 清华大学物理学博士</li>
+                            <li> 12年物理教学经验</li>
+                            <li> 多项教学研究成果</li>
+                        </ul>
+                        <p class="teacher-bio">王老师善于将复杂物理概念用简单易懂的方式讲解，帮助学生快速掌握物理学习方法，提升解题能力。</p>
+                        <a href="/cytWeb/teachers.html" class="btn">了解更多</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="/cytWeb/teachers.html" class="btn">查看全部师资</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 教学特色 -->
+    <section class="section features">
+        <div class="container">
+            <h2 class="section-title">教学特色</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>个性化教学</h3>
+                    <p>根据学生基础制定个性化学习方案，因材施教，确保每个学生都能获得最适合的教育。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>目标导向</h3>
+                    <p>明确学习目标，系统规划学习路径，确保学生在有限时间内获得最大提升。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>名师授课</h3>
+                    <p>所有课程均由经验丰富的名师授课，确保教学质量，让学生享受优质教育资源。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>跟踪辅导</h3>
+                    <p>全程跟踪学习进度，定期测评反馈，及时调整学习策略，确保学习效果最大化。</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="/cytWeb/features.html" class="btn">了解更多特色</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section class="section contact">
+        <div class="container">
+            <h2>联系我们</h2>
+            <p>想要了解更多课程信息或预约试听课程？</p>
+            <p>📞 电话：400-123-4567</p>
+            <p>📍 地址：北京市朝阳区教育路123号</p>
+            <a href="/cytWeb/contact.html" class="btn" style="background:white; color:#3498db;">立即咨询</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 名师教育. 保留所有权利.</p>
+            <p>专业师资 | 优质教育 | 成就梦想</p>
+        </div>
+    </footer>
+</body>
+</html>
