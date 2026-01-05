@@ -2,17 +2,23 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <!-- 新增：微信兼容所需的meta标签（方案一内容） -->
+      <!-- 1. 核心：移动端视口适配，确保微信内显示正常 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  
+      <!-- 2. 强制微信使用webkit内核渲染（避免兼容模式） -->
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+      <!-- 3. 禁止微信将网页识别为“应用”，避免跳转提示 -->
     <meta name="apple-mobile-web-app-capable" content="no">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="我的个人网页">
+  
+      <!-- 4. 微信分享/渲染优化（可选，进一步提升兼容性） -->
+    <meta name="wechat-webview-plugin-ignore" content="all">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="我的个人网页">
-    <meta property="og:description" content="这是我的纯前端个人网页">
-    <meta property="og:image" content="./images/cover.jpg">
+    <meta property="og:title" content="名师教育 - 优质师资团队">
+    <meta property="og:description" content="这是我制作的纯前端个人展示网页，包含我的作品案例和个人技能介绍，无需后端即可正常访问。">
+    <meta property="og:image" content="./cyt_picture/cyt.jpg">
     <title>名师教育 - 优质师资团队</title>
     <style>
         /* 保留原CSS样式 */
@@ -389,3 +395,4 @@
 </body>
 
 </html>
+
